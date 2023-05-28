@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"  class="grey-back">
+
+<head>
+   {% load static %}
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="{% static 'css/main.css' %}">
+   <title>
+      {% block title %} IoT {% endblock %}
+   </title>
+</head>
+
+
+<body class="grey-back">
+   {% block header %}
+   <div class="text-white containerp-5 dark-back text-center">
+      &nbsp;
+      <h1 >My page</h1>
+      <p>Sergio Hidalgo</p>
+    &nbsp;
+      
+      {% endblock %}
+   </div>
+   
+
+   {% block menu %}
+   &nbsp;
+      
+   <div class="text-white text-center">
+      <a class="btn btn-outline-light" href="{% url 'home' %}"> Homepage</a>
+      <a class= "btn btn-outline-light" href="{% url 'privacy' %}"> Privacy Policy</a>
+   </div>
+
+   &nbsp;
+
+   {% endblock %}
+   {% block content %}
+   {% endblock %}
+   {% block footer %}
+   {% endblock %}
+</body>
+
+</html>
